@@ -25,6 +25,10 @@ sed -i '/(<%=pcdata(ver.luciversion)%>)/a\      built by JUMP' package/lean/auto
 echo "$(date +'%m.%d.%Y')" > package/base-files/files/etc/openwrt_version
 
 # 修改部分默认设置
+sed -i "s/option check_signature/# option check_signature/g" package/system/opkg/Makefile
+sed -i "/exit 0/d" package/lean/default-settings/files/zzz-default-settings
+echo "echo 'src/gz openwrt_kenzok8 https://op.dllkids.xyz/packages/x86_64' >> etc/opkg/distfeeds.conf" >> package/lean/default-settings/files/zzz-default-settings
+echo "exit 0" >> package/lean/default-settings/files/zzz-default-settings
 sed -i "s/mirrors.cloud.tencent.com\/lede/mirrors.cloud.tencent.com\/openwrt/g" package/lean/default-settings/files/zzz-default-settings
 sed -i "s/sed -i 's\/root::0:0:99999:7:::/# sed -i 's\/root::0:0:99999:7:::/g" package/lean/default-settings/files/zzz-default-settings
 sed -i "s/sed -i '\/REDIRECT --to-ports/# sed -i '\/REDIRECT --to-ports/g" package/lean/default-settings/files/zzz-default-settings
