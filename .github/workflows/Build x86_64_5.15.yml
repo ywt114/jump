@@ -202,5 +202,5 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
       with:
-        keep_latest: 4
+        keep_latest: 5
         delete_tags: true
