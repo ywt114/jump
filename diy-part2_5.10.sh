@@ -123,6 +123,7 @@ git clone -b master https://github.com/linkease/nas-packages package/lean/nas-pa
 \rm -rf package/lean/nas-packages
 
 # 取消部分config配置
+sed -i 's/iperf3-ssl[[:space:]]*//g' target/linux/x86/Makefile
 # sed -i '/CONFIG_PACKAGE_kmod-usb-audio/d' ./.config
 # echo "# CONFIG_PACKAGE_kmod-usb-audio is not set" >> ./.config
 # echo "# CONFIG_PACKAGE_kmod-media-core is not set" >> ./.config
