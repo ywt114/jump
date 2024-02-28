@@ -150,7 +150,7 @@ jobs:
       run: |
         mkdir -p firmware
         mkdir -p firmware/package/
-        find openwrt/bin/targets/ -type f \( -name "*squashfs-combined-efi*.gz" -o -name "*sysupgrade*" \) -exec mv {} ./firmware/ \; 2>/dev/null || true
+        find openwrt/bin/targets/ -type f \( -name "*squashfs-combined*.gz" -o -name "*sysupgrade*" \) -exec mv {} ./firmware/ \; 2>/dev/null || true
         find openwrt/bin/packages/ -type f \( -name "*.ipk" \) -exec mv {} ./firmware/package/ \; 2>/dev/null || true
         mv openwrt/.config ./firmware/${{ matrix.target.arch }}_${{ matrix.target.kernel }}.config 2>/dev/null || true
         mv openwrt/build_dir/target-*/linux-*/linux-*/.config ./firmware/${{ matrix.target.arch }}_${{ matrix.target.kernel }}_kernel.config 2>/dev/null || true
