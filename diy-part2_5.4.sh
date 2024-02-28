@@ -73,8 +73,8 @@ curl -fsSL https://raw.githubusercontent.com/ywt114/diy/main/system.lua > feeds/
 # find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
 # find ./ | grep Makefile | grep pdnsd-alt | xargs rm -f
 \rm -rf feeds/packages/net/v2ray-geodata feeds/packages/net/pdnsd-alt
-# \rm -rf feeds/packages/lang/golang
-# git clone --depth=1 -b 21.x https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
+\rm -rf feeds/packages/lang/golang
+git clone --depth=1 -b 22.x https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
 rm -rf feeds/packages/net/curl
 git clone --depth=1 -b main https://github.com/sbwml/feeds_packages_net_curl feeds/packages/net/curl
 git clone --depth=1 -b master https://github.com/sbwml/luci-app-alist package/lean/alist
