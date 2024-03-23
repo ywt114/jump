@@ -159,8 +159,8 @@ jobs:
         echo -n "${{ env.date1 }}" > version.txt
         md5=$(md5sum *squashfs-combined.img.gz | awk '{print $1}') 2>/dev/null || true
         md5_efi=$(md5sum *squashfs-combined-efi.img.gz | awk '{print $1}') 2>/dev/null || true
-        echo -n "MD5 (x86-64-generic-squashfs-combined.img.gz) = $md5" > md5sum.txt
-        echo -n "MD5 (x86-64-generic-squashfs-combined-efi.img.gz) = $md5_efi" >> md5sum.txt
+        echo "md5=$md5" > md5sum.txt
+        echo "md5_efi=$md5_efi" >> md5sum.txt
         rm -rf sha256sums
         echo "status=success" >> $GITHUB_OUTPUT
 
