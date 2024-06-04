@@ -149,8 +149,8 @@ sed -i 's/Variable3 = "*.*"/Variable3 = "x86_64"/g' package/lean/luci-app-gpsysu
 sed -i 's/Variable4 = "*.*"/Variable4 = "6.6"/g' package/lean/luci-app-gpsysupgrade/root/usr/bin/upgrade.lua
 
 # 回退passwall到2024年1月29日旧版本
-# cd package/lean/small/luci-app-passwall
-# git reset --hard ecd92aa64174f5e7a200678b4122891764a6b245
-# cd ../../../..
-# \cp -rf package/lean/mosdns/v2dat package/lean/small
-# sed -i 's/CGO_ENABLED=0/CGO_ENABLED=1/g' package/lean/small/sing-box/Makefile
+cd package/lean/small/luci-app-passwall
+git reset --hard ecd92aa64174f5e7a200678b4122891764a6b245
+cd ../../../..
+\cp -rf package/lean/mosdns/v2dat package/lean/small
+sed -i 's/CGO_ENABLED=0/CGO_ENABLED=1/g' package/lean/small/sing-box/Makefile
