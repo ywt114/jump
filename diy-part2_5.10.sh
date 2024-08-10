@@ -79,7 +79,7 @@ git clone -b 22.x https://github.com/sbwml/packages_lang_golang feeds/packages/l
 # git clone -b main https://github.com/sbwml/feeds_packages_net_curl feeds/packages/net/curl
 git clone -b master https://github.com/sbwml/luci-app-alist package/lean/alist
 \rm -rf feeds/packages/net/mosdns feeds/luci/applications/luci-app-mosdns feeds/packages/utils/v2dat
-git clone -b v5 https://github.com/sbwml/luci-app-mosdns package/lean/mosdns
+git clone -b v5-lua https://github.com/sbwml/luci-app-mosdns package/lean/mosdns
 \rm -rf feeds/luci/applications/luci-app-adbyby-plus
 git clone -b main https://github.com/ywt114/luci-app-adbyby-plus-lite package/lean/luci-app-adbyby-plus-lite
 \rm -rf feeds/packages/net/msd_lite
