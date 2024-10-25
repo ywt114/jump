@@ -89,7 +89,7 @@ git clone -b master https://github.com/ywt114/luci-app-gpsysupgrade package/lean
 git clone -b master https://github.com/pymumu/openwrt-smartdns package/lean/smartdns
 git clone -b lede https://github.com/pymumu/luci-app-smartdns package/lean/luci-app-smartdns
 git clone -b master https://github.com/kenzok8/small package/lean/small
-\rm -rf package/lean/small/luci-app-bypass package/lean/small/homeproxy package/lean/small/luci-app-mihomo package/lean/small/luci-app-mosdns package/lean/small/luci-app-passwall2
+\rm -rf package/lean/small/luci-app-bypass package/lean/small/luci-app-homeproxy package/lean/small/luci-app-mihomo package/lean/small/luci-app-mosdns package/lean/small/luci-app-passwall2
 git clone -b main https://github.com/sirpdboy/luci-app-chatgpt-web package/lean/luci-app-chatgpt-web
 git clone -b master https://github.com/sirpdboy/luci-app-advanced package/lean/luci-app-advanced
 git clone -b master https://github.com/sirpdboy/luci-app-autotimeset package/lean/luci-app-autotimeset
