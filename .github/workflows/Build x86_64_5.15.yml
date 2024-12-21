@@ -180,7 +180,7 @@ jobs:
         echo "status=success" >> $GITHUB_OUTPUT
 
     - name: 上传releases固件发布
-      uses: softprops/action-gh-release@master
+      uses: softprops/action-gh-release@v2
       if: steps.organize.outputs.status == 'success' && env.UPLOAD_RELEASE == 'true' && !cancelled()
       env:
         GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
