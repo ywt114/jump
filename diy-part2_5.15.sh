@@ -86,9 +86,9 @@ git clone -b main https://github.com/ywt114/luci-app-adbyby-plus-lite package/le
 \rm -rf feeds/packages/net/msd_lite
 git clone -b main https://github.com/ywt114/luci-app-msd_lite package/lean/msd_lite
 git clone -b master https://github.com/ywt114/luci-app-gpsysupgrade package/lean/luci-app-gpsysupgrade
-\rm -rf feeds/packages/net/smartdns feeds/luci/applications/luci-app-smartdns
-git clone -b master https://github.com/pymumu/openwrt-smartdns package/lean/smartdns
-git clone -b lede https://github.com/pymumu/luci-app-smartdns package/lean/luci-app-smartdns
+# \rm -rf feeds/packages/net/smartdns feeds/luci/applications/luci-app-smartdns
+# git clone -b master https://github.com/pymumu/openwrt-smartdns package/lean/smartdns
+# git clone -b lede https://github.com/pymumu/luci-app-smartdns package/lean/luci-app-smartdns
 git clone -b master https://github.com/kenzok8/small package/lean/small
 \rm -rf package/lean/small/{*bypass*,*fchomo*,*homeproxy*,*mihomo*,*mosdns*,*nikki*,*passwall2*}
 sed -i 's/-flto/-flto -Wno-error/g' package/lean/small/shadowsocksr-libev/Makefile
